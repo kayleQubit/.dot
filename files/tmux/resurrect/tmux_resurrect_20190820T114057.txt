@@ -1,0 +1,28 @@
+pane	mine	1	:testApp	1	:*	1	:/Users/kayle/personal/testapp	0	bash	:
+pane	mine	1	:testApp	1	:*	2	:/Users/kayle/personal/testapp	1	bash	:
+pane	mine	1	:testApp	1	:*	3	:/Users/kayle/personal/testapp	0	bash	:
+pane	mine	2	:scratch	0	:-	1	:/Users/kayle/Desktop/kaylequbit	1	bash	:
+pane	mine	2	:scratch	0	:-	2	:/Users/kayle/Desktop/kaylequbit	0	bash	:
+pane	qubit	1	:experiences	1	:*	1	:/Users/kayle/experiences	0	bash	:
+pane	qubit	1	:experiences	1	:*	2	:/Users/kayle/experiences	1	bash	:
+pane	qubit	1	:experiences	1	:*	3	:/Users/kayle/experiences	0	bash	:
+pane	qubit	2	:unipro	0	:	1	:/Users/kayle/qubit-qa	1	bash	:
+pane	qubit	2	:unipro	0	:	2	:/Users/kayle/qubit-qa	0	bash	:
+pane	qubit	2	:unipro	0	:	3	:/Users/kayle/qubit-qa	0	bash	:
+pane	qubit	3	:uv-maps	0	:	1	:/Users/kayle/uv-maps	1	bash	:
+pane	qubit	3	:uv-maps	0	:	2	:/Users/kayle/uv-maps	0	bash	:
+pane	qubit	3	:uv-maps	0	:	3	:/Users/kayle/uv-maps	0	make	:/Library/Developer/CommandLineTools/usr/bin/make debug
+pane	qubit	4	:helix	0	:	1	:/Users/kayle	0	bash	:
+pane	qubit	4	:helix	0	:	2	:/Users/kayle	0	Python	:/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python -S /Users/kayle/Downloads/google-cloud-sdk/lib/gcloud.py compute --project qubit-client-37028 ssh --zone europe-west1-b azure-to-gcs
+pane	qubit	4	:helix	0	:	3	:/Users/kayle	1	bash	:
+pane	qubit	5	:ce-site	0	:-	1	:/Users/kayle/ce-site	0	vim	:vim index.js
+pane	qubit	5	:ce-site	0	:-	2	:/Users/kayle/ce-site	0	bash	:
+pane	qubit	5	:ce-site	0	:-	3	:/Users/kayle/ce-site	1	vim	:vim ./react/index.js
+window	mine	1	1	:*	d50d,238x71,0,0{119x71,0,0,24,118x71,120,0[118x35,120,0,25,118x35,120,36,26]}
+window	mine	2	0	:-	2278,238x71,0,0{119x71,0,0,27,118x71,120,0,28}
+window	qubit	1	1	:*	88ba,238x71,0,0{144x71,0,0,6,93x71,145,0[93x35,145,0,9,93x35,145,36,10]}
+window	qubit	2	0	:	4bb2,238x71,0,0{144x71,0,0,11,93x71,145,0[93x35,145,0,12,93x35,145,36,13]}
+window	qubit	3	0	:	5a9f,238x71,0,0{134x71,0,0,14,103x71,135,0[103x35,135,0,15,103x35,135,36,16]}
+window	qubit	4	0	:	4511,238x71,0,0{119x71,0,0,17,118x71,120,0[118x35,120,0,18,118x35,120,36,19]}
+window	qubit	5	0	:-	091f,238x71,0,0{137x71,0,0,20,100x71,138,0[100x35,138,0,22,100x35,138,36,23]}
+state	qubit	
