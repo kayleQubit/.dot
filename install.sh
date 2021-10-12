@@ -104,3 +104,4 @@ print "Setup complete, congratulations!"
 
 if [[ $0 != -zsh ]]; then
   chsh -s /bin/zsh
+fi
