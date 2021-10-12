@@ -21,7 +21,7 @@ print "MacOS core setup"
 if [ "$(uname)" = "Darwin" ]; then
 
   # Brew
-  if [ -z "$(type -fp brew)" ]; then
+  if [ -z "$(command -v brew)" ]; then
     print "Install Brew to get us started on Mac"
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   fi
@@ -44,10 +44,11 @@ elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
   # Core setup for Linux
   sudo apt update
   sudo apt upgrade
-  sudo apt install curl
-  sudo apt install zsh
-  sudo apt install vim-gtx
-  sudo apt install tmux
+  sudo apt-get install -y curl
+  sudo apt-get install -y zsh
+  sudo apt-get install -y vim-athena
+  sudo apt-get install -y neovim
+  sudo apt-get install -y tmux
 fi
 
 # Oh my ZSH
@@ -103,6 +104,6 @@ fi
 
 print "Setup complete, congratulations!"
 
-if [ $0 != -zsh ]; then
-  chsh -s /bin/zsh
-fi
+# if [ $0 != -zsh ]; then
+#   chsh -s /bin/zsh
+# fi
