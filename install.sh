@@ -17,8 +17,8 @@ fi
 print "Getting the core dev setup"
 
 # Core setup for MacOS
-print "MacOS core setup"
 if [ "$(uname)" = "Darwin" ]; then
+  print "MacOS core setup"
 
   # Brew
   if [ -z "$(command -v brew)" ]; then
@@ -39,8 +39,8 @@ if [ "$(uname)" = "Darwin" ]; then
   #   cd -; }
 
 # Core setup for Linux
-print "Linux core setup"
 elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
+  print "Linux core setup"
   # Core setup for Linux
   sudo apt update
   sudo apt upgrade
@@ -87,8 +87,8 @@ git config --global user.name $gitname
 git config --global user.email $gitemail
 
 # Mac Apps
-print "Install all the casks"
 if [ "$(uname)" = "Darwin" ]; then
+print "Install all the casks"
   brew install --cask rectangle
   brew install --cask karabiner-elements
   brew install --cask clipy
