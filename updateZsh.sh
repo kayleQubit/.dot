@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[ -d ${HOME}/.oh-my-zsh ] && [ -d ${HOME}/.oh-my-zsh/themes ] cp ${HOME}/.dot/files/zsh/imp.zsh-theme ${HOME}/.oh-my-zsh/themes/imp.zsh-theme
+[ -d ${HOME}/.oh-my-zsh ] && [ -d ${HOME}/.oh-my-zsh/themes ] && cp ${HOME}/.dot/files/zsh/imp.zsh-theme ${HOME}/.oh-my-zsh/themes/imp.zsh-theme
 [ -f ${HOME}/.zshrc ] && sed -i.backup -e 's,ZSH_THEME=".*",ZSH_THEME="imp",g' ${HOME}/.zshrc
 echo switched to Imp theme
 
