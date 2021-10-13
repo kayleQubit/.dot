@@ -5,5 +5,3 @@
 echo switched to Imp theme
 
 [ -f ${HOME}/.zshrc ] && grep "tmux" ${HOME}/.zshrc || echo $'\nif [ -z "$TMUX" ]; then\n    tmux attach -t local || tmux new -s local\nfi\n' >> ${HOME}/.zshrc
-
-[ -f ${HOME}/.zshrc ] && source ${HOME}/.zshrc
