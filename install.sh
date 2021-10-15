@@ -64,6 +64,7 @@ cd ..
 rm -rf fonts
 
 /bin/bash ~/.dot/updateBash.sh
+/bin/bash ~/.dot/updateZsh.sh
 /bin/bash ~/.dot/updateVim.sh
 /bin/bash ~/.dot/updateTmux.sh
 
