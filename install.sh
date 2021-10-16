@@ -71,11 +71,13 @@ rm -rf fonts
 # Install NVM
 print "Javascript Five star dev"
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh | bash
-source ${HOME}/.nvm/nvm.sh
+. ${HOME}/.nvm/nvm.sh
+cd ${HOME}/.nvm
 nvm install 12
 nvm install 8
 nvm install node
 nvm use 12
+cd ${HOME}/.dot
 
 # Git setup
 print "Let's get Git set up"
