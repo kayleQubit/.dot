@@ -71,13 +71,14 @@ rm -rf fonts
 # Install NVM
 print "Javascript Five star dev"
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh | bash
-. ${HOME}/.nvm/nvm.sh
-cd ${HOME}/.nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 nvm install 12
 nvm install 8
 nvm install node
 nvm use 12
-cd ${HOME}/.dot
+# Add nvm to Zsh if it exists
+[ -f ${HOME}/.zshrc ] && grep "nvm" ${HOME}/.zshrc || echo $'export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"\n[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm\n' >> ${HOME}/.zshrc
 
 # Git setup
 print "Let's get Git set up"
