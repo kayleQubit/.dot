@@ -63,15 +63,15 @@ cd fonts
 cd ..
 rm -rf fonts
 
-/bin/bash ~/.dot/updateBash.sh
-/bin/bash ~/.dot/updateZsh.sh
-/bin/bash ~/.dot/updateVim.sh
-/bin/bash ~/.dot/updateTmux.sh
+/bin/bash ${HOME}/.dot/updateBash.sh
+/bin/bash ${HOME}/.dot/updateZsh.sh
+/bin/bash ${HOME}/.dot/updateVim.sh
+/bin/bash ${HOME}/.dot/updateTmux.sh
 
 # Install NVM
 print "Javascript Five star dev"
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh | bash
-. ~/.nvm/nvm.sh
+source ${HOME}/.nvm/nvm.sh
 nvm install 12
 nvm install 8
 nvm install node
