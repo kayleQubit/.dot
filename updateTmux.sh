@@ -4,7 +4,6 @@
 # cp ${HOME}/.dot/files/tmux.conf ${HOME}/.tmux.conf
 # cp -r ${HOME}/.dot/files/tmux/ ${HOME}/.tmux/
 
-cd ${HOME}
-git clone https://github.com/gpakosz/.tmux.git
-ln -s -f .tmux/.tmux.conf
-cp .tmux/.tmux.conf.local .
+git clone https://github.com/gpakosz/.tmux.git ${HOME}
+ln -s -f ${HOME}/.tmux/.tmux.conf ${HOME}/.tmux.conf
+cp ${HOME}/.dot/files/tmux.conf.local ${HOME}/.tmux/.tmux.conf.local
