@@ -96,6 +96,7 @@ print "Install all the casks"
   brew install --cask rectangle
   brew install --cask karabiner-elements
   brew install --cask clipy
+  brew install --cask unnaturalscrollwheels
 
   brew install yarn --without-node
   brew install --cask google-chrome
