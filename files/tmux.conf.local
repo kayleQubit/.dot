@@ -46,23 +46,23 @@ tmux_conf_new_session_prompt=false
 tmux_conf_24b_colour=false
 
 # default theme
-tmux_conf_theme_colour_1="#080808"    # dark gray
-tmux_conf_theme_colour_2="#303030"    # gray
-tmux_conf_theme_colour_3="#8a8a8a"    # light gray
-tmux_conf_theme_colour_4="#00afff"    # light blue
-tmux_conf_theme_colour_5="#ffff00"    # yellow
-tmux_conf_theme_colour_6="#080808"    # dark gray
-tmux_conf_theme_colour_7="#e4e4e4"    # white
-tmux_conf_theme_colour_8="#080808"    # dark gray
-tmux_conf_theme_colour_9="#ffff00"    # yellow
-tmux_conf_theme_colour_10="#ff00af"   # pink
-tmux_conf_theme_colour_11="#5fff00"   # green
-tmux_conf_theme_colour_12="#8a8a8a"   # light gray
-tmux_conf_theme_colour_13="#e4e4e4"   # white
-tmux_conf_theme_colour_14="#080808"   # dark gray
-tmux_conf_theme_colour_15="#080808"   # dark gray
-tmux_conf_theme_colour_16="#d70000"   # red
-tmux_conf_theme_colour_17="#e4e4e4"   # white
+tmux_conf_theme_colour_1="#1c2128"    # dark gray // MANY THINGS
+tmux_conf_theme_colour_2="#373e47"    # gray // LAST STATUS BG
+tmux_conf_theme_colour_3="#cdd9e5"    # gray // LAST STATUS BG
+tmux_conf_theme_colour_4="#6cb6ff"    # light blue // LAST STATUS FG
+tmux_conf_theme_colour_5="#8ddb8c"    # yellow // INPUT LINE BG
+tmux_conf_theme_colour_6="#1c2128"    # dark gray // LEFT SESSION STATUS FG
+tmux_conf_theme_colour_7="#cdd9e5"    # white --
+tmux_conf_theme_colour_8="#1c2128"    # dark gray --
+tmux_conf_theme_colour_9="#8256d0"    # yellow // LEFT SESSION STATUS BG
+tmux_conf_theme_colour_10="#b083f0"   # pink // LEFT UPTIME STATUS BG
+tmux_conf_theme_colour_11="#6bc46d"   # green --
+tmux_conf_theme_colour_12="#cdd9e5"   # light gray // RIGHT TIME DATE STATUS FG
+tmux_conf_theme_colour_13="#cdd9e5"   # white  // RIGHT USER STATUS FG
+tmux_conf_theme_colour_14="#cdd9e5"   # dark gray // RIGHT HOSTNAME FG
+tmux_conf_theme_colour_15="#1c2128"   # dark gray // RIGHT TIME DATE STATUS BG
+tmux_conf_theme_colour_16="#922323"   # red // RIGHT USER STATUS BG
+tmux_conf_theme_colour_17="#255ab2"   # white // RIGHT HOSTNAME BG
 
 # default theme (ansi)
 #tmux_conf_theme_colour_1="colour0"
@@ -181,7 +181,7 @@ tmux_conf_theme_window_status_activity_attr="underscore"
 
 # window bell status style
 tmux_conf_theme_window_status_bell_fg="$tmux_conf_theme_colour_5"
-tmux_conf_theme_window_status_bell_bg="default"
+tmux_conf_theme_window_status_bel:l_bg="$tmux_conf_theme_colour_1"
 tmux_conf_theme_window_status_bell_attr="blink,bold"
 
 # window last status style
@@ -230,14 +230,14 @@ tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d
 tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} "
 
 # status left style
-tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
+tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_8"
 tmux_conf_theme_status_left_bg="$tmux_conf_theme_colour_9,$tmux_conf_theme_colour_10,$tmux_conf_theme_colour_11"
-tmux_conf_theme_status_left_attr="bold,none,none"
+tmux_conf_theme_status_left_attr="bold,bold,bold"
 
 # status right style
 tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_13,$tmux_conf_theme_colour_14"
 tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_15,$tmux_conf_theme_colour_16,$tmux_conf_theme_colour_17"
-tmux_conf_theme_status_right_attr="none,none,bold"
+tmux_conf_theme_status_right_attr="bold,bold,bold"
 
 # pairing indicator
 tmux_conf_theme_pairing="⚇"                 # U+2687
@@ -284,8 +284,8 @@ tmux_conf_battery_bar_length="auto"
 #   - gradient (default)
 #   - heat
 #   - "colour_full_fg,colour_empty_fg,colour_bg"
-tmux_conf_battery_bar_palette="gradient"
-#tmux_conf_battery_bar_palette="#d70000,#e4e4e4,#000000"   # red, white, black
+#tmux_conf_battery_bar_palette="gradient"
+tmux_conf_battery_bar_palette="#6cb6ff,#cdd9e5,#1c2128"   # red, white, black
 
 # battery hbar palette, possible values are:
 #   - gradient (default)
@@ -384,8 +384,8 @@ tmux_conf_uninstall_plugins_on_reload=true
 # to enable a plugin, use the 'set -g @plugin' syntax:
 # visit https://github.com/tmux-plugins for available plugins
 #set -g @plugin 'tmux-plugins/tmux-copycat'
-set -g @plugin 'tmux-plugins/tmux-cpu'
-#set -g @plugin 'tmux-plugins/tmux-sensible'
+#set -g @plugin 'tmux-plugins/tmux-cpu'
+set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @continuum-restore 'on'
